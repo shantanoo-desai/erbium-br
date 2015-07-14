@@ -53,7 +53,7 @@ if returned value is __0__ this means it has no parent and it is itself the Bord
 
 if returned valued is **greater than 0** then use the following 
 <pre>
-	get rplinfo/routes?index=(value)
+	get rplinfo/routes?index=(0 to value-1)
 </pre>
 
 sure enough you will be getting the Routing information in JSON format.
