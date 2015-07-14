@@ -65,7 +65,7 @@ if the routes value returned is 1 then use
 	get rplinfo/routes?index=0
 </pre>	
 
-if you use __index=1__ then the returned output will be the following: (hence always use __(0 to values-1))
+if you use __index=1__ then the returned output will be the following: (hence always use __(0 to values-1)__)
 <pre>{}</pre>
 
 # Important configurations:
