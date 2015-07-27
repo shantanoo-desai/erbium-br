@@ -41,12 +41,12 @@ print_local_addresses(void)
   uint8_t state;
   char addr[64];
 
-  PRINTA("{\"addrs\":[");
+  PRINTA("{\"addrs\":["); 
   for(i = 0; i < UIP_DS6_ADDR_NB; i++) {
     state = uip_ds6_if.addr_list[i].state;
     if(uip_ds6_if.addr_list[i].isused &&
        (state == ADDR_TENTATIVE || state == ADDR_PREFERRED)) {
-      PRINTA("\" ");
+      PRINTA("\"");
       uip_debug_ipaddr_print(&uip_ds6_if.addr_list[i].ipaddr);
       PRINTA("\",");
     }
