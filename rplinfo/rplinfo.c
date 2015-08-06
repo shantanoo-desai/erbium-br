@@ -89,9 +89,9 @@ static void routes_handler(void *request, void *response, uint8_t *buffer, uint1
 */
 
 RESOURCE(routes,
-		"title=\"RPL ROUTE INFO\"; rt=\"Data\"",
+		"title=\"RPL INFO?index=value\"; rt=\"Data\"",
 		routes_handler,
-		routes_handler,
+		NULL,
 		NULL,
 		NULL);
 
@@ -142,9 +142,8 @@ routes_handler(void *request, void *response, uint8_t *buffer, uint16_t preferre
 		strpos += snprintf((char *)buffer, preferred_size, "%d", count);
 	}
 
-	//*offset = -1;
 	REST.set_response_payload(response, (char *)buffer, strpos); // Setting the payload of response.
-
+	//*offset = -1;
 }
 
 /*
@@ -202,9 +201,9 @@ static void parents_handler(void *request, void *response, uint8_t *buffer ,uint
 
 
 RESOURCE(parents,
-		"title=\"PARENT INFO\"; rt = \"Data\"",
+		"title=\"PARENTS?index=value\"; rt = \"Data\"",
 		parents_handler,
-		parents_handler,
+		NULL,
 		NULL,
 		NULL);
 
@@ -279,8 +278,8 @@ parents_handler(void *request, void *response, uint8_t *buffer ,uint16_t preferr
 		REST.set_header_content_type(response, REST.type.APPLICATION_JSON);
 	}
 
-	//*offset = -1;
 	REST.set_response_payload(response, buffer, strpos);
+	//*offset = -1;
 
 }
 
@@ -292,5 +291,4 @@ rplinfo_activate_resources(void)
   rest_activate_resource(&routes, "rplinfo/routes");
 
 }
-
 
