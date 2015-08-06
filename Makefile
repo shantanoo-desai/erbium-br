@@ -21,8 +21,8 @@ APPS += rest-engine
 
 # project directories
 PROJECTDIRS += rplinfo
-PROJECT_SOURCEFILES += rplinfo.c slip-bridge.c
-
+PROJECT_SOURCEFILES += rplinfo.c 
+PROJECT_SOURCEFILES += slip-bridge.c
 ifeq ($(PREFIX),)
  PREFIX = aaaa::1/64
 endif
