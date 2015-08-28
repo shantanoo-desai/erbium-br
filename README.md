@@ -91,12 +91,16 @@ hence in order to fit the code do the following steps
 In order to use multihop functionality for testing purposes
 provided that distance between nodes and the Border Router is
 not sufficient enough, Control *TX Power* by adding the following in the source code:
-#### Header 
 use __CC2420.h__ in the Contiki-OS to control TX Power.
 Path to the header file:
 `dev/cc2420/cc2420.h`
 Add the Following to the source-code `erbr.c`
 <pre>
+	#include "cc2420.h"
+	.
+	.
+	.
+	
 	static uint8_t txpower;
 	txpower = (any number between 0 to 31); 
 	cc2420_set_txpower(txpower);
