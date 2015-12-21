@@ -115,4 +115,4 @@ for tesing purpose, disable both the RDC and MAC Layers in __project-conf.h__ fi
     #DEFINE_CONF_MAC nullmac_driver
 </pre>
 
-Not for practical scenarios, only when your want the Border-Router with all power and no packet drops
+Not for practical scenarios, only when your want the Border-Router with all power and no packet drop
